@@ -1,2 +1,0 @@
-# Camille
-IMMA Final Project

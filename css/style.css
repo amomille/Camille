@@ -320,7 +320,7 @@ section{
         background: var(--bg-color);
         transition: 0.4s;
     }
-    header .nuvlist .active{
+    header .nuvlist.active{
         top: 86px;
     }
     .nuvlist a{

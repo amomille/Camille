@@ -163,7 +163,7 @@ section{
 }
 .box{
     height: 400px;
-    width: 300px;
+    width: 300px auto;
     min-width: fit-content;
     border-radius: 20%;
     transition: all 0.8s;

@@ -22,25 +22,23 @@
 
 
   <header>
-    <a herf="#" class="logo">I<span>MM</span>A</a>
+    <a herf="#" class="logo"><span>IMMA</span></a>
     <div class=" bx bx-menu" id="menu-icon"></div>
 
     <ul class="nuvlist">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#artwork">Artwork</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="btn"><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
   <section class="home" id="home">
     <div class="home-text">
-      <h5>Hello, I am</h5>
-      <h1><span>Camille</span> Cariaga</h1>
-      <h6><span>I</span> am a <span>M</span>ulti
-        <span>M</span>edia <span>A</span>rtist.</h6>
-      <p>
-      </p>
+      <h5>Hi, There!</h5>
+      <h1> I am <span class="input"></span></h1>
+      <h6></h6>
+      <p></p>
     </div>
 
     <div class="home-img">
@@ -148,5 +146,14 @@
 
   <script src="./files/lightbox-plus-jquery.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".input",{
+      strings: ["Camille Cariaga.", "MultiMedia Artist." ],
+      typeSpeed: 70,
+      backSpeed: 60,
+      loop: true
+    });
+  </script>
 </body>
 </html>

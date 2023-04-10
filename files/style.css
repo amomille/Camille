@@ -13,7 +13,7 @@
     --main-color: rgb(253, 123, 144);
     --2nd-main-color: #ffffffcc;
     --text-color: #fff;    
-    --big-font: 3rem;
+    --big-font: 2.5rem;
     --h2-font: 1.8rem;
     --p-font: 1rem;
 }
@@ -167,7 +167,7 @@ section{
     height: 445px;
     width: 300px auto;
     min-height: max-content;
-    border-radius: 15%;
+    border-radius: 5%;
     transition: all 1s;
     overflow: hidden;
     box-shadow: var(--main-color) 0px 3px 5px;
@@ -256,34 +256,30 @@ section{
 }
 .gallary{
     background: var(--main-color) ;
-    width: 66.6%;
-    margin: 30px auto;
-    margin-top: 0;
-    padding: 0 20px;
-    display: flex;
+    width: 72%;
+    margin:auto;
+    margin-top: 15px;
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-    background-image: url(./upload/IMG_5441.jpg);
-    background-size: cover;
     box-shadow: var(--main-color) 0px 3px 5px;
 }
 .gallary-text h2{
     color: white;
-    font-size: var(--h2-font);
+    font-size: var(--big-font);
     margin-bottom: 2px;
 }
 .gallary-btn{
-    background: var(--main-color);
+    background: black;
     color: var(--text-color);
-    box-shadow: 4px 4px var(--text-color);
+    box-shadow: 6px 4px var(--text-color);
     padding: 0 20px;
     line-height: 42px;
     display: inline-block;
-    border: 1px solid transparent;
+    border: 2px solid black;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     transition: ease all .35s;
 }
 .gallary-btn:hover{

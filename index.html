@@ -150,10 +150,10 @@
     </div>
 
     <div class="contact-form">
-      <form action="">
-        <input type="" placeholder="Your Name" required>
-        <input type="email" name="" id="" placeholder="Email Address" required>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Project Description" required>
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" name="" id="email" placeholder="Email Address" required>
+        <textarea  id="message" cols="30" rows="10" placeholder="How can I help you?" required>
         </textarea>
         <input type="submit" name="" value="Send" class="send-btn">
       </form>
@@ -177,5 +177,21 @@
       loop: true
     });
   </script>
+   <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+              SecureToken:" f0a12c79-2205-49d7-840d-88a23d911afb",
+    To : 'jerichourbano.01.01.04@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Message: " + document.getElementById("massage").value
+}).then(
+  message => alert("Massage Sent Successfully")
+);
+        }
+    </script>
 </body>
 </html>

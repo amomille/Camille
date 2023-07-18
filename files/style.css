@@ -17,6 +17,16 @@
     --h2-font: 1.8rem;
     --p-font: 1rem;
 }
+.container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+  }
 body{
     background: var(--bg-color);
     color: var(--text-color);
@@ -255,31 +265,28 @@ section{
     transition: 0.4s;
 }
 .gallary{
+    margin: 0 auto;
     background: var(--main-color) ;
     width: 72%;
-    margin:auto;
-    margin-top: 15px;
     align-items: center;
-    justify-content: space-between;
     border-radius: 5px;
     box-shadow: var(--main-color) 0px 3px 5px;
 }
 .gallary-text h2{
+    text-align: center;
     color: white;
     font-size: var(--big-font);
-    margin-bottom: 2px;
 }
 .gallary-btn{
+    text-align: center;
     background: black;
     color: var(--text-color);
     box-shadow: 6px 4px var(--text-color);
-    padding: 0 20px;
-    line-height: 42px;
-    display: inline-block;
-    border: 2px solid black;
-    font-size: 14px;
+    padding: 0 40px;
+    line-height: 40px;
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 15px;
     transition: ease all .35s;
 }
 .gallary-btn:hover{
@@ -452,6 +459,12 @@ section{
         background-size: 760px;
     }
 }
+.contact-text h2{
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    font-size: var(--h2-font);
+}
 .contact-form{
     display: flex;
     align-items: center;
@@ -463,6 +476,7 @@ section{
     width: 550px;
 }
 form input,
+form button,
 form textarea{
     width: 100%;
     padding: 20px;
@@ -499,11 +513,19 @@ form .send-btn:hover{
     color: var(--main-color);
     box-shadow: 4px 4px var(--main-color);
 }
+.msg{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    text-align: center;
+    text-overflow: initial;
+    color: var(--2nd-main-color);
+}
 .copyright{
     text-align: center;
     padding: 30px;
     color: var(--2nd-main-color);
     background: #0b0b13;
-    margin-top: 3rem;
     line-height: 1.8rem;
 }

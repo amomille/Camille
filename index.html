@@ -146,17 +146,18 @@
 
   <section class="contact" id="contact">
     <div class="center">
-      <h2><span>C</span>ontact me</h2>
+      <h2><span>C</span>ONTACT <span>M</span>E</h2>
     </div>
 
     <div class="contact-form">
-      <form onsubmit="sendEmail(); reset(); return false;">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" name="" id="email" placeholder="Email Address" required>
-        <textarea  id="message" cols="30" rows="10" placeholder="How can I help you?" required>
-        </textarea>
-        <input type="submit" name="" value="Send" class="send-btn">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Email Address" required>
+        <textarea  name="Message" placeholder="How can I help you?" required></textarea>
+        <button type="submit" class="send-btn">Send</button>
       </form>
+    </div>
+    <div class="msg" id="msg">
     </div>
   </section>
 
@@ -177,21 +178,23 @@
       loop: true
     });
   </script>
-   <script src=" https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function sendEmail(){
-            Email.send({
-              SecureToken:" f0a12c79-2205-49d7-840d-88a23d911afb",
-    To : 'jerichourbano.01.01.04@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact Form Enquiry",
-    Body : "Name: " + document.getElementById("name").value
-    + "<br> Email: " + document.getElementById("email").value
-    + "<br> Message: " + document.getElementById("massage").value
-}).then(
-  message => alert("Massage Sent Successfully")
-);
-        }
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKoRJyHpDbZ2rSnN7I-rCZIu-cQD7l3Pd4qhkc25Pg2nhbo0AuzgBHrO6_tw9SXd6/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function() {
+              msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
 </body>
 </html>
